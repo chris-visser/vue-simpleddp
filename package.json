@@ -1,6 +1,6 @@
 {
   "name": "vue-simpleddp",
-  "version": "0.0.6-2",
+  "version": "0.0.6-3",
   "description": "A simple plugin to connect an external Vue app to Meteor's realtime DDP system",
   "author": "Chris Visser",
   "keywords": [
