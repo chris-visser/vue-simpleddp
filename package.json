@@ -1,0 +1,23 @@
+{
+  "name": "vue-simpleddp",
+  "version": "0.0.6-1",
+  "description": "A simple plugin to connect an external Vue app to Meteor's realtime DDP system",
+  "author": "Chris Visser",
+  "keywords": ["Vue", "DDP", "Meteor", "SimpleDDP", "Plugin"],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel plugin.js -o index.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5"
+  },
+  "dependencies": {
+    "isomorphic-ws": "^4.0.1",
+    "simpleddp": "^1.1.10",
+    "socket.io-client": "^2.1.1"
+  }
+}
