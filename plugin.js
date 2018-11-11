@@ -1,10 +1,8 @@
-import Vue from 'vue';
 import SimpleDDP from 'simpleddp';
 import ws from 'isomorphic-ws';
 
 export default {
   install(Vue, options) {
-    console.log(options);
     const api = new SimpleDDP({
       endpoint: 'ws://localhost:3030/websocket',
       SocketConstructor: ws,

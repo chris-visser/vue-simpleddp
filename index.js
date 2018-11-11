@@ -5,8 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _vue = _interopRequireDefault(require("vue"));
-
 var _simpleddp = _interopRequireDefault(require("simpleddp"));
 
 var _isomorphicWs = _interopRequireDefault(require("isomorphic-ws"));
@@ -40,6 +38,7 @@ var _default = {
     /*#__PURE__*/
     function () {
       var _ref2 = _asyncToGenerator(function* (publicationName, ...args) {
+        console.log('Subscribing');
         return api.sub(publicationName, ...args).ready();
       });
 
