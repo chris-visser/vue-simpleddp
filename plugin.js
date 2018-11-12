@@ -18,13 +18,16 @@ export default {
     })();
 
     Vue.prototype.$subscribe = async (publicationName, ...args) => {
-      return api.sub(publicationName, ...args).ready();
+      return api.sub(publicationName, args).ready();
     };
 
     Vue.prototype.find = function(collectionName) {
-      const collection = api.collection(collectionName);
 
-      return collection.fetch();
+      // temp solution but a reactive one, however we can't mutate this
+      // should be changed as soon as simpleddp 1.2.0 come out
+      if (!Array.isArray(api.collections[collectionName])) api.collections[collectionName] = [];
+
+      return api.collections[collectionName];
     };
   },
 };
