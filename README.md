@@ -38,15 +38,15 @@ Subscribe to data from one of your components like the example below:
       (async () => {
         await this.$subscribe('articles').catch(console.error);
 
-        this.articles = await this.find('articles');
+        this.articles = this.find('articles');
       })();
     },
   };
 ```
 ## Options
 
-You can pass additional options to the plugin to for example specify the endpoint. These options are 
-passed down to the simpleddp package. 
+You can pass additional options to the plugin to for example specify the endpoint. These options are
+passed down to the simpleddp package.
 
 ```javascript
 Vue.use(VueDDP, {
@@ -54,11 +54,10 @@ Vue.use(VueDDP, {
 });
 ```
 
-Below are some example options. 
+Below are some example options.
 
 | Option | Default Value | Description |
 | ---------- | --- | ----- |
 | endpoint | ws://localhost:3030/websocket | The link to the DDP websocket endpoint (In Meteor its usually ws://{host}/websocket) |
 | ws | ws | A constructor for the websocket library. vue-simpleddp uses isomorphic-ws by default to make it work on client and serverside |
 | reconnectInterval | 5000 | The interval in which it tries to reconnect when disconnected from the server |
-
